@@ -26,10 +26,12 @@
      document.documentElement.dataset.theme || (prefersDark ? 'dark' : 'light'));
 
   apply(current);
+  setIcon(current);
 
   btn.addEventListener('click', () => {
     current = current === 'dark' ? 'light' : 'dark';
     apply(current);
+    setIcon(current);
     localStorage.setItem(KEY, current);
   });
 
@@ -38,6 +40,12 @@
     document.documentElement.dataset.theme = mode;         // [data-theme="dark|light"]
     document.documentElement.classList.toggle('dark',  mode === 'dark');   // .dark
     document.documentElement.classList.toggle('light', mode === 'light');  // .light
+  }
+
+  // Show the opposite mode icon to hint what happens on click
+  function setIcon(mode) {
+    if (!btn) return;
+    btn.textContent = mode === 'dark' ? '☀' : '☾';
   }
 })();
 
