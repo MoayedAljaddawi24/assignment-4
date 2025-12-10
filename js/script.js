@@ -45,7 +45,7 @@
   // Show the opposite mode icon to hint what happens on click
   function setIcon(mode) {
     if (!btn) return;
-    btn.textContent = mode === 'dark' ? '☀' : '☾';
+    btn.textContent = mode === 'dark' ? '\u2600' : '\u263e';
   }
 })();
 

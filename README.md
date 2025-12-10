@@ -9,6 +9,7 @@ A polished single-page portfolio built across the course assignments. This final
 - AI Career Coach backed by the local dataset in `assets/data/ai-insights.json`; filters by goal and time, with graceful fallbacks.
 - Hero extras: personalized greeting from the saved name and a daily quote with spinner plus retry.
 - Contact form validation with toast feedback, lazy-loaded images, reduced-motion support, and consistent button/input styles.
+- Presentation section linking to slide deck and demo video placeholders.
 
 ## Getting Started
 1. Clone the repo:
@@ -30,9 +31,13 @@ assignment-4/
   - images/
   - data/
     - ai-insights.json
+- presentation/
+  - slides.pdf (add your deck here)
+  - demo-video.mp4 (add your recording here)
 - docs/
   - ai-usage-report.md
   - technical-documentation.md
+  - testing-plan.md
 
 
 ## Documentation
