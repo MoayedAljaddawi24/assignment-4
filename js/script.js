@@ -1,4 +1,4 @@
-
+﻿
 /* ============================
    Base helpers (year, theme)
    ============================ */
@@ -86,7 +86,7 @@
   async function loadQuote() {
     spinner.hidden = false;
     btn.hidden = true;
-    text.textContent = "Loading quote…";
+    text.textContent = "Loading quote...";
     authorEl.textContent = "";
 
     try {
@@ -94,7 +94,7 @@
       if (!response.ok) throw new Error("HTTP " + response.status);
       const data = await response.json();
 
-      text.textContent = `“${data.quote || data.content}”`;
+      text.textContent = '"' + (data.quote || data.content) + '"';
       authorEl.textContent = `${data.author}`;
       authorEl.style.display = "block"; 
       authorEl.style.marginTop = "0.25rem";
@@ -210,7 +210,7 @@
       const isFavorite = favorites.has(id);
       btn.setAttribute('aria-pressed', String(isFavorite));
       const icon = btn.querySelector('[aria-hidden="true"]');
-      if (icon) icon.textContent = isFavorite ? '★' : '☆';
+      if (icon) icon.textContent = isFavorite ? '\u2605' : '\u2606';
     });
     if (favoritesCount) favoritesCount.textContent = String(favorites.size);
   }
@@ -363,7 +363,7 @@
     if (form.checkValidity()) {
       const name = (document.getElementById('name')?.value || '').trim();
       if (name) localStorage.setItem('username', name);
-      toast('Message sent! (Demo — no data is transmitted)', 'success');
+      toast('Message sent! (Demo - no data is transmitted)', 'success');
       form.reset();
     } else {
       form.reportValidity();
@@ -433,7 +433,7 @@
     }
 
     spinner && (spinner.hidden = false);
-    setStatus('Loading repositories…');
+    setStatus('Loading repositories...');
     retryBtn && (retryBtn.hidden = true);
 
     try {
@@ -500,7 +500,7 @@
       meta.className = 'repo-meta';
       meta.innerHTML = `
         <span>${repo.language || 'Misc'}</span>
-        <span>★ ${repo.stars}</span>
+        <span>&#9733; ${repo.stars}</span>
         <span>Updated ${new Date(repo.updatedAt).toLocaleDateString()}</span>
       `;
       article.appendChild(meta);
@@ -559,3 +559,4 @@
     return `${hours} hour${hours > 1 ? 's' : ''}`;
   }
 })();
+
