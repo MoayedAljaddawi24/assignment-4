@@ -33,15 +33,10 @@ assignment-4/
 - docs/
   - ai-usage-report.md
   - technical-documentation.md
-  - testing-plan.md
 
-## Testing
-- Follow `docs/testing-plan.md` for the full checklist (GitHub feed, favorites/search/sort, AI coach, accessibility, and form validation).
-- Quick smoke test: load the page, toggle the theme, star/unstar a project, refresh the GitHub feed, and generate an AI tip.
 
 ## Documentation
 - `docs/technical-documentation.md` - implementation details by assignment phase and architecture notes.
-- `docs/testing-plan.md` - manual validation scenarios.
 - `docs/ai-usage-report.md` - prompts, outputs, edits, and lessons learned from AI assistance.
 
 ## Deployment
