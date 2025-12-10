@@ -1,0 +1,269 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>My Portfolio</title>
+
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <a href="#mainContent" class="skip-link">Skip to main content</a>
+
+  <header class="site-header">
+      <a class="logo" href="#hero">My Portfolio</a>
+
+      <nav id="siteNav" class="nav">
+        <a href="#hero">Hero</a>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#github">GitHub</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <button id="themeToggle" class="theme-toggle" aria-label="Toggle color theme">🌓</button>
+
+      <button id="menuToggle" class="menu-toggle" aria-expanded="false" aria-controls="siteNav" aria-label="Toggle navigation">
+        ☰
+      </button>
+    </header>
+
+
+  <main id="mainContent">
+    <section id="hero" class="hero">
+      <h2>Hero</h2> 
+
+      <p class="hero-lead">
+        Hello, I'm <strong>Moayed Aljaddawi</strong>. 
+        Welcome to my portfolio website.
+      </p>
+
+      <div class="hero-cta">
+        <a href="#projects" class="btn btn-primary">See Projects</a>
+        <a href="#contact" class="btn">Contact Me</a>
+      </div>
+
+      <!-- Assignment 2: greeting + quote -->
+      <div class="hero-extras">
+        <p id="personalGreeting" class="muted"></p>
+        <div id="dailyQuote" class="quote">
+          <span class="spinner" aria-hidden="true"></span>
+          <span class="quote-text" aria-live="polite">Loading quote…</span>
+          <button id="retryQuote" class="btn btn-sm" type="button" hidden>Retry</button>
+          <span class="quote-author"></span> 
+        </div>
+      </div>
+    </section>
+
+    <section id="github" class="github">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">API Integration</p>
+          <h2>Latest GitHub Activity</h2>
+          <p class="muted">
+            Pulled live from <strong>@MoayedAljaddawi24</strong> to keep this portfolio current.
+            Sort the list or refresh it to fetch the newest repositories.
+          </p>
+        </div>
+        <div class="github-controls">
+          <label>
+            <span class="visually-hidden">Sort repositories</span>
+            <select id="githubSort" aria-label="Sort repositories">
+              <option value="updated" selected>Recently updated</option>
+              <option value="stars">Most stars</option>
+            </select>
+          </label>
+          <button id="githubRefresh" class="btn btn-sm" type="button">
+            Refresh
+          </button>
+        </div>
+      </div>
+
+      <div id="githubStatus" class="github-status">
+        <span class="spinner" aria-hidden="true"></span>
+        <span class="status-text" aria-live="polite">Loading repositories…</span>
+        <button id="githubRetry" class="btn btn-sm" type="button" hidden>Retry</button>
+      </div>
+
+      <div id="githubRepos" class="github-grid" aria-live="polite"></div>
+    </section>
+
+    <section id="about">
+      <h2>About Me</h2>
+      <p>
+        I'm a CS student at King Fahd University of Petroleum & Minerals, passionate about web development.
+        I enjoy solving problems, expanding my knowledge, and continuously learning new technologies.
+      </p>
+    </section>
+
+    <section id="projects">
+      <h2>Projects</h2>
+
+      <!-- Assignment 2: filter + search -->
+      <div class="projects-controls">
+        <div class="filters" role="group" aria-label="Filter projects">
+          <button class="filter-btn" data-category="all" aria-pressed="true">All</button>
+          <button class="filter-btn" data-category="html">HTML</button>
+          <button class="filter-btn" data-category="css">CSS</button>
+          <button class="filter-btn" data-category="javascript">JavaScript</button>
+          <button class="filter-btn" data-category="java">Java</button>
+        </div>
+
+        <label class="sort-select">
+          <span class="visually-hidden">Sort projects</span>
+          <select id="projectSort" aria-label="Sort projects">
+            <option value="recent" selected>Recently updated</option>
+            <option value="alpha">Alphabetical</option>
+          </select>
+        </label>
+
+        <label class="search-wrap">
+          <span class="visually-hidden">Search projects</span>
+          <input id="projectSearch" type="search" placeholder="Search projects…" />
+        </label>
+
+        <label class="favorites-toggle">
+          <input id="favoritesOnly" type="checkbox" />
+          <span>Favorites only</span>
+          <span class="badge" id="favoritesCount" aria-live="polite">0</span>
+        </label>
+      </div>
+
+      <div class="projects-grid">
+
+        <article class="card" data-id="reservation-app" data-tags="java" data-date="2024-02-12">
+          <img src="assets/images/reservation.png" alt="Screenshot of the Event Ticket Reservation System interface" class="card-img" loading="lazy" decoding="async" width="540" height="304">
+          <div class="card-body">
+            <h3>Event Ticket Reservation System</h3>
+            <p>
+              A course project for ICS to manage event ticket reservations. Users can browse events,
+              reserve tickets, and view bookings. Practiced HTML, CSS, and basic JavaScript for forms.
+            </p>
+            <ul class="tags">
+              <li>Java</li>
+            </ul>
+
+            <button class="favorite-btn" type="button" aria-pressed="false">
+              <span aria-hidden="true">☆</span>
+              <span class="visually-hidden">Toggle favorite for Event Ticket Reservation System</span>
+            </button>
+
+            <!-- Assignment 2: collapsible -->
+            <button class="details-toggle" aria-expanded="false" aria-controls="proj1-details">More details</button>
+            <div id="proj1-details" class="details" hidden>
+              <ul>
+                <li>Role: Developer</li>
+                <li>Focus: Forms, validation</li>
+                <li>Takeaway: State management basics</li>
+              </ul>
+            </div>
+          </div>
+        </article>
+
+        <article class="card" data-id="kfupm-event-hub" data-tags="html css javascript" data-date="2024-04-05">
+          <img src="assets/images/kfupm-event-hub.png" alt="Screenshot of the KFUPM Event Hub website layout" class="card-img" loading="lazy" decoding="async" width="540" height="304">
+          <div class="card-body">
+            <h3>KFUPM Event Hub <span class="badge">In Progress</span></h3>
+            <p>
+              Ongoing course project: a central hub for students to discover, register for, and manage
+              university events. Currently focusing on layout and responsiveness; features to follow.
+            </p>
+            <ul class="tags">
+              <li>HTML</li><li>CSS</li><li>JavaScript</li>
+            </ul>
+
+            <button class="favorite-btn" type="button" aria-pressed="false">
+              <span aria-hidden="true">☆</span>
+              <span class="visually-hidden">Toggle favorite for KFUPM Event Hub</span>
+            </button>
+
+            <!-- Assignment 2: collapsible -->
+            <button class="details-toggle" aria-expanded="false" aria-controls="proj2-details">More details</button>
+            <div id="proj2-details" class="details" hidden>
+              <ul>
+                <li>Role: Frontend/UX</li>
+                <li>Focus: Responsive layout</li>
+                <li>Next: Event registration workflow</li>
+              </ul>
+            </div>
+          </div>
+        </article>
+      </div>
+      
+      <!-- Assignment 2: empty state -->
+      <p id="projectsEmpty" class="empty" hidden>No projects found. Try a different filter or search.</p>
+    </section>
+
+    <section id="coach" class="ai-coach">
+      <div class="coach-heading">
+        <p class="eyebrow">AI Career Coach</p>
+        <h2>Get a personalized action plan</h2>
+        <p class="muted">
+          These suggestions were generated with AI tools I used throughout the course. Choose a goal and available time to get a curated plan.
+        </p>
+      </div>
+
+      <form id="coachForm" class="coach-form">
+        <label>
+          <span>Primary focus</span>
+          <select id="coachGoal" required>
+            <option value="">Select one…</option>
+            <option value="showcase">Showcase projects</option>
+            <option value="network">Expand networking</option>
+            <option value="learn">Learn new tech</option>
+          </select>
+        </label>
+
+        <label>
+          <span>Weekly time available</span>
+          <select id="coachTime" required>
+            <option value="">Select one…</option>
+            <option value="short">1–2 hrs</option>
+            <option value="long">5+ hrs</option>
+          </select>
+        </label>
+
+        <button class="btn btn-primary" type="submit">Generate tip</button>
+      </form>
+
+      <div id="coachOutput" class="coach-output" role="status" aria-live="polite">
+        <p class="muted">Pick a focus + time window to see AI-curated suggestions.</p>
+      </div>
+    </section>
+
+
+    <section id="contact">
+      <h2>Contact</h2>
+
+      <form id="contactForm" class="form" novalidate>
+        <div class="form-row">
+          <label for="name">Name</label>
+          <input id="name" name="name" type="text" placeholder="Your name" required />
+          <small id="nameError" class="error" aria-live="polite"></small>
+        </div>
+
+        <div class="form-row">
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" placeholder="you@example.com" required />
+          <small id="emailError" class="error" aria-live="polite"></small>
+        </div>
+
+        <div class="form-row">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="5" placeholder="How can I help?" required></textarea>
+          <small id="messageError" class="error" aria-live="polite"></small>
+        </div>
+
+        <button class="btn btn-primary" type="submit">Send</button>
+        <p class="form-note">This is a demo form; no data is sent.</p>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; <span id="year"></span> Moayed Aljaddawi</p>
+  </footer>
+
+  <script src="js/script.js" defer></script>
+</body>
+</html>

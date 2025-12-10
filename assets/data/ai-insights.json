@@ -1,0 +1,68 @@
+[
+  {
+    "id": "showcase-short",
+    "goal": "showcase",
+    "time": "short",
+    "title": "Boost one flagship project",
+    "tip": "Select your most impressive build and reframe it with a story arc: problem, solution, measurable impact. Use a single hero graphic optimized for 1440px displays.",
+    "actions": [
+      "Add outcome metrics (users reached, hours saved) in the project card.",
+      "Record a 30-second Loom walkthrough and link it in the details accordion."
+    ]
+  },
+  {
+    "id": "showcase-long",
+    "goal": "showcase",
+    "time": "long",
+    "title": "Publish a curated case study series",
+    "tip": "AI suggested presenting three projects as a themed series (design, data, systems). Each post should highlight decision trade-offs and code snippets.",
+    "actions": [
+      "Draft 3 medium-length blog posts (500–700 words) covering challenge, approach, and test results.",
+      "Cross-link the posts inside the Projects section to keep visitors exploring."
+    ]
+  },
+  {
+    "id": "network-short",
+    "goal": "network",
+    "time": "short",
+    "title": "Prep a punchy outreach note",
+    "tip": "Feed your portfolio headline into an AI copy editor to craft a two-sentence intro email. Personalize the second sentence with why you admire the recipient’s work.",
+    "actions": [
+      "Highlight one collaborative feature (like the GitHub integration) to show teamwork.",
+      "Link to the live deployment and invite quick feedback."
+    ]
+  },
+  {
+    "id": "network-long",
+    "goal": "network",
+    "time": "long",
+    "title": "Host a mini livestream",
+    "tip": "AI recommended running a 20-minute Twitch/YouTube walkthrough of your portfolio update. Use chapter markers so recruiters can jump to what matters.",
+    "actions": [
+      "Script the session with an AI outline tool, focusing on problem-solving moments.",
+      "Repurpose highlights into LinkedIn clips to widen reach."
+    ]
+  },
+  {
+    "id": "learn-short",
+    "goal": "learn",
+    "time": "short",
+    "title": "Micro-learning sprints",
+    "tip": "Take a recent Stack Overflow thread, have AI summarize the debate, then rebuild the solution in a CodePen snippet. Document the takeaway in your portfolio changelog.",
+    "actions": [
+      "Schedule two 25-minute sessions this week for focused replication.",
+      "Add a 'What I learned' badge next to the updated component."
+    ]
+  },
+  {
+    "id": "learn-long",
+    "goal": "learn",
+    "time": "long",
+    "title": "AI-curated syllabus",
+    "tip": "Use an AI planner to chunk a new technology (e.g., Astro or Svelte) into a 4-week roadmap. Each week culminates in a portfolio enhancement that showcases the concept.",
+    "actions": [
+      "Week 1: Layout fundamentals — convert About section into the new framework.",
+      "Week 4: Deploy and collect Core Web Vitals metrics to prove mastery."
+    ]
+  }
+]
