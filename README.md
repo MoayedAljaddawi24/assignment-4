@@ -37,7 +37,6 @@ assignment-4/
 - docs/
   - ai-usage-report.md
   - technical-documentation.md
-  - testing-plan.md
 
 
 ## Documentation
